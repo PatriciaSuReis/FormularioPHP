@@ -2,7 +2,7 @@
 
 > ## Status: Em desenvolvimento :warning:
 
-Descrição: recebimento de dados via formulário html, santitação e validação em php.<br>
+Descrição: recebimento de dados via formulário html, sanitização  e validação em php.<br>
 Funcionalidade de cadastro de usuários.
 
 ## *Tecnologias usadas*
