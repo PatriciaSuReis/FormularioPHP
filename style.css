@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0c0ce94d;
+}
+
+/********************************/
+.formT {
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .212);
+}
+
+.formF {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+.formTitulo {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/**********************************/
+.login-adm {
+    display: flex;
+    align-items: center;
+}
+
+.login-adm button {
+    border: none;
+    background-color: #6c63ff;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-adm button:hover {
+    background-color: #6b63fff1;
+}
+
+.login-adm button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+/********************************/
+.formTitulo h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #6c63ff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+/********************************/
+.box-user {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-boxUser {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-boxUser input {
+    margin: 0.6rem;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.input-boxUser input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-boxUser input:focus-visible {
+    outline: 1px solid #6c63ff;
+}
+
+/********************************/
+.input-boxUser label,
+.gen-titulo h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-boxUser input::placeholder {
+    color: #000000be;
+}
+
+/********************************/
+.gen-Grupo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0.5rem;
+}
+
+.gen-input {
+    display: flex;
+    align-items: center;
+}
+
+.gen-input input {
+    margin-right: 0.35rem;
+}
+
+.gen-input  label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+/********************************/
+.button-form input {
+    width: 30%;
+    margin-top: 3.5rem;
+    border: none;
+    background-color: #6c63ff;
+    padding: 0.70rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-form input:hover {
+    background-color: #6b63fff1;
+}
+
+.button-form input[type=submit],
+.button-form input[type=reset] {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+/******************************/
+
+@media screen and (max-width: 700px) {
+    .formT {
+        width: 50%;
+    }
+
+    .formF {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+   
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Cadastro -->
+    <div class="formT">
+        <div class="formF">
+            <form action="validaçãoDeDados.php" method="POST">
+
+                <div class="formTitulo">
+                    <div class="titulo">
+                        <h1>Cadastra-se</h1>
+                    </div>
+                    <div class="login-adm">
+                        <button><a href="#">Entrar Adminstrador</a> </button>
+                    </div>
+                </div>
+                
+                <div class="box-user">
+                    <div class="input-boxUser">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Ex:Ana" required/>
+                    </div>
+                    <div class="input-boxUser">
+                        <label for="data_nasc">Data de nascimento</label>
+                        <input type="date" name="data_nasc" id="data_nasc" required/>
+                    </div>
+                    
+                    <div class="input-boxUser">
+                        <label for="tel">Telefone</label>
+                        <input type="tel" name="tel" id="tel" placeholder="Ex:(55) 1234-5678" required/>
+                    </div>
+                    <div class="input-boxUser">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required/>
+                    </div>        
+                </div>
+
+                <div class="gen-boxRadio">
+                    <div class="gen-titulo"> 
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="gen-Grupo"> 
+                        <div class="gen-input"> 
+                            <input type="radio" name="gen" id="masc"/>
+                            <label for="masc">Masculino</label>
+                        </div>
+                        <div class="gen-input">
+                            <input type="radio" name="gen" id="fem"/>
+                            <label for="fem">Feminino</label>
+                        </div>
+                        <div class="gen-input">
+                            <input type="radio" name="gen" id="ou"/>
+                            <label for="ou">Outros</label>
+                        </div>
+                        <div class="gen-input">
+                            <input type="radio" name="gen" id="pref"/>
+                            <label for="pref">Prefiro não informar</label> 
+                        </div>
+                    </div>                                 
+                </div>
+
+                <!-- Envio para o PHP -->
+                <div class="button-form">
+                    <input type="submit" value="Enviar" name="enviar">
+                    <input type="reset" value="Limpar" name="limpar">
+                </div>
+                
+            </form>
+        </div>
+   </div>
+    
+</body>
+</html>
