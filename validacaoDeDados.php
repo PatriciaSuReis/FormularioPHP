@@ -1,4 +1,6 @@
 <?php
+
+if(isset($_POST['enviar'])) {
 //dados do formularios
 $nome = $_POST["nome"];
 $genero = $_POST["gen"];
@@ -6,26 +8,23 @@ $dataNasc = $_POST["data_nasc"];
 $telefone = $_POST["tel"];
 $email = $_POST["email"];
 
-//limpeza dos dados
-$nomes = filter_var($nome, FILTER_SANITIZE_STRING);
-$telefones = filter_var($telefone, FILTER_SANITIZE_NUMBER_INT);
-$emails = filter_var($email, FILTER_SANITIZE_EMAIL);
+//erros
+$erros = [];
 
-echo $nomes."<br>";//teste ---- tira as tags html do input
+// SANITIZAR limpeza dos dados
+$nomes = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+$telefones = filter_input(INPUT_POST, 'tel', FILTER_SANITIZE_NUMBER_INT);
+$emails = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 
-//VALIDAÇÂO
+//VALIDAÇÂO APOS SANITIZAR
 //validação telefone
-    if (!filter_var($telefones, FILTER_VALIDATE_INT) === false) {
-        echo "Telefone válido! <br>";
-    } else{
-        echo "telefone inválido! <br>";
+    if (!filter_var($telefones, FILTER_VALIDATE_INT)) {
+        $erros[] = "Telefone inválido!";
     }
 
 //validação email
-    if (!filter_var($emails, FILTER_VALIDATE_EMAIL) === false) {
-        echo $emails. "Email válido!<br>";
-    } else {
-        echo $emails. "Email inválido!<br>";
+    if (!filter_var($emails, FILTER_VALIDATE_EMAIL)) {
+        $erros[] = "Email inválido!";
     }
 
 //validação data de nascimmento 
@@ -37,10 +36,28 @@ echo $nomes."<br>";//teste ---- tira as tags html do input
         $ano = $array[2]; 
     }
 
-    if (checkdate($mes, $dia, $ano)) {
-        echo "Data ".$dataNasc." é válida<br>";
+    if (checkdate($dia, $mes, $ano)) {
+        echo "Data válida<br>";
+
     } else {
-        echo "Data ".$dataNasc." é inválida<br>";
+        $erros[] = "Data inválida!";
     }
 
+//array erros
+    if (!empty($erros)) {
+        foreach($erros as $erro) {
+            echo "<li>$erro</li>";
+        }
+    } else {
+        echo "<p>Dados corretos.</p>";
+    }
+
+//Mostra os dados
+echo "<hr>";
+echo "Nome: $nomes <br>";
+echo "Data de nascimento: $dataNasc <br>";
+echo "Telefone: $telefones <br>";
+echo "Email: $emails <br>";
+
+}
 ?>
