@@ -36,7 +36,7 @@ $emails = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $ano = $array[2]; 
     }
 
-    if (checkdate($dia, $mes, $ano)) {
+    if (checkdate($mes, $dia, $ano)) {
         echo "Data válida<br>";
 
     } else {
