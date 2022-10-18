@@ -80,3 +80,45 @@
     }
 ?>
 
+<<<<<<< HEAD
+=======
+//validação email
+    if (!filter_var($emails, FILTER_VALIDATE_EMAIL)) {
+        $erros[] = "Email inválido!";
+    }
+
+//validação data de nascimmento 
+    $array = explode ('-', $dataNasc);
+
+    if (count($array) == 3) {
+        $dia = $array[0];
+        $mes = $array[1];
+        $ano = $array[2]; 
+    }
+
+    if (checkdate($mes, $dia, $ano)) {
+        echo "Data válida<br>";
+
+    } else {
+        $erros[] = "Data inválida!";
+    }
+
+//array erros
+    if (!empty($erros)) {
+        foreach($erros as $erro) {
+            echo "<li>$erro</li>";
+        }
+    } else {
+        echo "<p>Dados corretos.</p>";
+    }
+
+//Mostra os dados
+echo "<hr>";
+echo "Nome: $nomes <br>";
+echo "Data de nascimento: $dataNasc <br>";
+echo "Telefone: $telefones <br>";
+echo "Email: $emails <br>";
+
+}
+?>
+>>>>>>> e5cc01c4555977bbb8df6ec00cd68321f821d7f0
