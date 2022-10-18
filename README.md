@@ -5,6 +5,9 @@
 Descrição: recebimento de dados via formulário html, sanitização  e validação em php.<br>
 Funcionalidade de cadastro de usuários.
 
+### Alunos:
+Patrícia Suellen, Lucas Davi, Kennet, Isa Carolina, Gabriel Rocha, Mascus, Geovanna Alcântara
+
 ## *Tecnologias usadas*
 ```
 HTML 
@@ -16,7 +19,6 @@ JSON
 
 ## :shipit: *Futuro*
 *Implemetações futura: Envio de dados para o JSON*<br>
-*Colaboradores*<br>
 
 ## Recomedável instalação do VS Code.<br>
 
