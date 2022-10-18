@@ -19,28 +19,25 @@
                     <div class="titulo">
                         <h1>Cadastra-se</h1>
                     </div>
-                    <div class="login-adm">
-                        <button><a href="#">Entrar Adminstrador</a> </button>
-                    </div>
                 </div>
                 
                 <div class="box-user">
                     <div class="input-boxUser">
                         <label for="nome">Nome</label>
-                        <input type="text" name="nome" id="nome" placeholder="Ex:Ana" required/>
+                        <input type="text" name="user[nome]" id="nome" placeholder="Ex:Ana" />
                     </div>
                     <div class="input-boxUser">
                         <label for="data_nasc">Data de nascimento</label>
-                        <input type="date" name="data_nasc" id="data_nasc" required/>
+                        <input type="date" name="user[dataNasc]" id="data_nasc" />
                     </div>
                     
                     <div class="input-boxUser">
                         <label for="tel">Telefone</label>
-                        <input type="tel" name="tel" id="tel" placeholder="Ex:(55) 1234-5678" required/>
+                        <input type="tel" name="user[telefone]" id="tel" placeholder="Ex:(55) 1234-5678" />
                     </div>
                     <div class="input-boxUser">
                         <label for="email">E-mail</label>
-                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required/>
+                        <input type="email" name="user[email]" id="email" placeholder="Digite seu e-mail" />
                     </div>        
                 </div>
 
@@ -51,19 +48,19 @@
 
                     <div class="gen-Grupo"> 
                         <div class="gen-input"> 
-                            <input type="radio" name="gen" id="masc"/>
+                            <input type="radio" name="user[gen]" id="masc"/>
                             <label for="masc">Masculino</label>
                         </div>
                         <div class="gen-input">
-                            <input type="radio" name="gen" id="fem"/>
+                            <input type="radio" name="user[gen]" id="fem"/>
                             <label for="fem">Feminino</label>
                         </div>
                         <div class="gen-input">
-                            <input type="radio" name="gen" id="ou"/>
-                            <label for="ou">Outros</label>
+                            <input type="radio" name="user[gen]" id="ou"/>
+                            <label for="outros">Outros</label>
                         </div>
                         <div class="gen-input">
-                            <input type="radio" name="gen" id="pref"/>
+                            <input type="radio" name="user[gen]" id="pref"/>
                             <label for="pref">Prefiro não informar</label> 
                         </div>
                     </div>                                 
