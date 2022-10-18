@@ -5,20 +5,20 @@
 Descrição: recebimento de dados via formulário html, sanitização  e validação em php.<br>
 Funcionalidade de cadastro de usuários.
 
-### Alunos:
-Patrícia Suellen, Lucas Davi, Kennet, Isa Carolina, Gabriel Rocha, Mascus, Geovanna Alcântara
-
+## Alunos turma ADS-M-01.22:
+```
+Patrícia Suellen, Lucas Davi, Kennet, Isa Carolina, Gabriel Rocha, Marcus, Geovanna Alcântara
+```
 ## *Tecnologias usadas*
 ```
 HTML 
 CSS
 PHP
 XAMPP - APACHE
-JSON
 ```
 
 ## :shipit: *Futuro*
-*Implemetações futura: Envio de dados para o JSON*<br>
+*Possível melhoramento do código*
 
 ## Recomedável instalação do VS Code.<br>
 
